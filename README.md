@@ -8,6 +8,6 @@ conversations easier to understand.  Here's an example of what it looks like:
 
 ## Installation
 
-To install LessWrong v2.0 Anti-Kibitzer, first install (Tampermonkey)[https://www.tampermonkey.net/] for your browser.  Then
-click [this link](https://github.com/mherreshoff/lw-antikibitzer/raw/master/LessWrong%202.0%20Anti-Kibitzer.user.js) and follow
-Tampermonkey's prompts to install the user-script.
+To install LessWrong v2.0 Anti-Kibitzer, first install [Tampermonkey](https://www.tampermonkey.net/) for your browser.  Then
+click [this link](https://github.com/mherreshoff/lw-antikibitzer/raw/master/LessWrong%202.0%20Anti-Kibitzer.user.js) (which
+opens the .user.js script above) and follow Tampermonkey's prompts to install it.
