@@ -31,6 +31,12 @@ colorful_censor_bar.cache = {}
 
 function vote_censor_bar(votes) { return '<span style="color:black">█</span>'; }
 
+function notification_censor_bar(content) {
+  var m = content.match(/^(.*)( has created .*)$/);
+  if (!m) return content;
+  return colorful_censor_bar(m[1]) + m[2];
+}
+
 
 function censorship_sweep() {
     function update_censor_text(selector, f, might_change) {
@@ -43,12 +49,12 @@ function censorship_sweep() {
             if (might_change && detected != data.original && detected != data.bar) {
                 data = {'original': detected, 'bar': f(detected)}
             }
-            // TODO: fix the problem where vote upates get lost.
             $(elem).html(censorship_on ? data.bar : data.original);
             $(elem).data("censor", data);
         });
     }
     update_censor_text(".UsersNameDisplay-userName", colorful_censor_bar, false);
+    update_censor_text(".NotificationsItem-notificationLabel", notification_censor_bar, false);
     update_censor_text(".PostsVote-voteScore", vote_censor_bar, true);
     update_censor_text(".CommentsVote-voteScore", vote_censor_bar, true);
 }
