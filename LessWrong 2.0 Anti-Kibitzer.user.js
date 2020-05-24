@@ -57,6 +57,7 @@ function censorship_sweep() {
     update_censor_text(".NotificationsItem-notificationLabel", notification_censor_bar, false);
     update_censor_text(".PostsVote-voteScore", vote_censor_bar, true);
     update_censor_text(".CommentsVote-voteScore", vote_censor_bar, true);
+    update_censor_text(".PostsItem2-karma", vote_censor_bar, true);
 }
 
 var censorship_sweeper = setInterval(censorship_sweep, 100);
